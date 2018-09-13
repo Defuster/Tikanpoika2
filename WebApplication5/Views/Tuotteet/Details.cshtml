@@ -1,0 +1,42 @@
+﻿@model WebApplication5.Models.Tuote
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tuote</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nimi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nimi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hinta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hinta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Veroprosentti)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Veroprosentti)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TuoteID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
